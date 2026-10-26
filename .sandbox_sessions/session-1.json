@@ -1,0 +1,17 @@
+{
+  "session_id": "session-1",
+  "tool_outputs": [
+    {
+      "tool_name": "read_file",
+      "raw_output": "file content here",
+      "truncated_output": "\n... [truncated 17 chars]",
+      "original_size": 17,
+      "truncated_size": 25,
+      "reduction_achieved": -0.47058823529411775,
+      "timestamp": 1793014214.4283192
+    }
+  ],
+  "metadata": {},
+  "created_at": 1793014214.4281824,
+  "updated_at": 1793014214.4283245
+}

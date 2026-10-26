@@ -4,44 +4,36 @@ Each round completes one feature or repair. Future items are planned, not implem
 
 ## Current round
 
-project-setup
+core-api
 
 ## Roadmap
 
-### project-setup — Project Setup & Skeleton
+### core-api — Core FastAPI Application Skeleton
 
-Status: in_progress
+Status: done
 
 Acceptance:
-- FastAPI backend with health endpoint runs
-- React frontend with Vite builds and serves
-- Docker Compose orchestrates both services
-- Tests pass for both backend and frontend
+- FastAPI app starts on port 8000
+- Health endpoint returns 200 OK
+- Basic project structure with pyproject.toml
 
-### context-sandbox — Context Sandbox (Tool Output Reduction)
+Implementation: `app/main.py`, `pyproject.toml`
+
+Tests: `tests/test_main.py`
+
+### context-sandbox — Context Sandbox Tool Output Reduction
 
 Status: planned
 
 Acceptance:
-- Tool output captured and summarized
-- 98% reduction demonstrated on sample data
-- Original output recoverable on demand
-
-### session-memory — Session Memory Persistence
-
-Status: planned
-
-Acceptance:
-- Session state persisted to disk
-- Memory restored across restarts
-- Queryable session history
+- Tool output sandboxed and truncated to 98% reduction
+- Session memory persisted across requests
 
 ### mcp-routing — MCP Platform Routing
 
 Status: planned
 
 Acceptance:
-- Routes requests to 17 platforms via MCP
-- Hook system for pre/post processing
-- Platform health monitoring
+- Routes requests across 17 platforms via MCP
+- Hooks enforce routing rules
 

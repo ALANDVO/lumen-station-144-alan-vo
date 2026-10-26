@@ -1,40 +1,29 @@
 {
   "schema_version": 1,
-  "current_feature": "project-setup",
+  "current_feature": "core-api",
   "features": [
     {
-      "id": "project-setup",
-      "title": "Project Setup & Skeleton",
-      "status": "in_progress",
+      "id": "core-api",
+      "title": "Core FastAPI Application Skeleton",
+      "status": "done",
       "acceptance": [
-        "FastAPI backend with health endpoint runs",
-        "React frontend with Vite builds and serves",
-        "Docker Compose orchestrates both services",
-        "Tests pass for both backend and frontend"
+        "FastAPI app starts on port 8000",
+        "Health endpoint returns 200 OK",
+        "Basic project structure with pyproject.toml"
       ],
-      "implementation": [],
-      "tests": []
+      "implementation": [
+        "app/main.py",
+        "pyproject.toml"
+      ],
+      "tests": ["tests/test_main.py"]
     },
     {
       "id": "context-sandbox",
-      "title": "Context Sandbox (Tool Output Reduction)",
+      "title": "Context Sandbox Tool Output Reduction",
       "status": "planned",
       "acceptance": [
-        "Tool output captured and summarized",
-        "98% reduction demonstrated on sample data",
-        "Original output recoverable on demand"
-      ],
-      "implementation": [],
-      "tests": []
-    },
-    {
-      "id": "session-memory",
-      "title": "Session Memory Persistence",
-      "status": "planned",
-      "acceptance": [
-        "Session state persisted to disk",
-        "Memory restored across restarts",
-        "Queryable session history"
+        "Tool output sandboxed and truncated to 98% reduction",
+        "Session memory persisted across requests"
       ],
       "implementation": [],
       "tests": []
@@ -44,9 +33,8 @@
       "title": "MCP Platform Routing",
       "status": "planned",
       "acceptance": [
-        "Routes requests to 17 platforms via MCP",
-        "Hook system for pre/post processing",
-        "Platform health monitoring"
+        "Routes requests across 17 platforms via MCP",
+        "Hooks enforce routing rules"
       ],
       "implementation": [],
       "tests": []
