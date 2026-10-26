@@ -1,0 +1,17 @@
+{
+  "session_id": "default",
+  "tool_outputs": [
+    {
+      "tool_name": "bash",
+      "raw_output": "test output",
+      "truncated_output": "\n... [truncated 11 chars]",
+      "original_size": 11,
+      "truncated_size": 25,
+      "reduction_achieved": -1.272727272727273,
+      "timestamp": 1793014214.4611876
+    }
+  ],
+  "metadata": {},
+  "created_at": 1793014214.4610362,
+  "updated_at": 1793014214.4611914
+}

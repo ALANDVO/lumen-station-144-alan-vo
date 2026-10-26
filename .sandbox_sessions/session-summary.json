@@ -1,0 +1,62 @@
+{
+  "session_id": "session-summary",
+  "tool_outputs": [
+    {
+      "tool_name": "tool1",
+      "raw_output": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "truncated_output": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n... [truncated 50 chars]",
+      "original_size": 100,
+      "truncated_size": 75,
+      "reduction_achieved": 0.25,
+      "timestamp": 1793014214.4297776
+    },
+    {
+      "tool_name": "tool2",
+      "raw_output": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "truncated_output": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\n... [truncated 100 chars]",
+      "original_size": 200,
+      "truncated_size": 126,
+      "reduction_achieved": 0.37,
+      "timestamp": 1793014214.4299424
+    },
+    {
+      "tool_name": "tool1",
+      "raw_output": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "truncated_output": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "original_size": 100,
+      "truncated_size": 100,
+      "reduction_achieved": 0.0,
+      "timestamp": 1793014281.8204172
+    },
+    {
+      "tool_name": "tool2",
+      "raw_output": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "truncated_output": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "original_size": 200,
+      "truncated_size": 200,
+      "reduction_achieved": 0.0,
+      "timestamp": 1793014281.8209252
+    },
+    {
+      "tool_name": "tool1",
+      "raw_output": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "truncated_output": "aaaaaaaaaaaaaaaaaaaaaaaaa\n... [truncated 50 chars]",
+      "original_size": 100,
+      "truncated_size": 50,
+      "reduction_achieved": 0.5,
+      "timestamp": 1793014344.71907
+    },
+    {
+      "tool_name": "tool2",
+      "raw_output": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "truncated_output": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\n... [truncated 100 chars]",
+      "original_size": 200,
+      "truncated_size": 100,
+      "reduction_achieved": 0.5,
+      "timestamp": 1793014344.7194943
+    }
+  ],
+  "metadata": {},
+  "created_at": 1793014214.4295664,
+  "updated_at": 1793014344.7194993
+}
