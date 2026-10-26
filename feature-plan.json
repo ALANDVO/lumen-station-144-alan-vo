@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "current_feature": "project-setup",
+  "features": [
+    {
+      "id": "project-setup",
+      "title": "Project Setup & Skeleton",
+      "status": "in_progress",
+      "acceptance": [
+        "FastAPI backend with health endpoint runs",
+        "React frontend with Vite builds and serves",
+        "Docker Compose orchestrates both services",
+        "Tests pass for both backend and frontend"
+      ],
+      "implementation": [],
+      "tests": []
+    },
+    {
+      "id": "context-sandbox",
+      "title": "Context Sandbox (Tool Output Reduction)",
+      "status": "planned",
+      "acceptance": [
+        "Tool output captured and summarized",
+        "98% reduction demonstrated on sample data",
+        "Original output recoverable on demand"
+      ],
+      "implementation": [],
+      "tests": []
+    },
+    {
+      "id": "session-memory",
+      "title": "Session Memory Persistence",
+      "status": "planned",
+      "acceptance": [
+        "Session state persisted to disk",
+        "Memory restored across restarts",
+        "Queryable session history"
+      ],
+      "implementation": [],
+      "tests": []
+    },
+    {
+      "id": "mcp-routing",
+      "title": "MCP Platform Routing",
+      "status": "planned",
+      "acceptance": [
+        "Routes requests to 17 platforms via MCP",
+        "Hook system for pre/post processing",
+        "Platform health monitoring"
+      ],
+      "implementation": [],
+      "tests": []
+    }
+  ]
+}
