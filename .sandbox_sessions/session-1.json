@@ -4,14 +4,14 @@
     {
       "tool_name": "read_file",
       "raw_output": "file content here",
-      "truncated_output": "\n... [truncated 17 chars]",
+      "truncated_output": "file content here",
       "original_size": 17,
-      "truncated_size": 25,
-      "reduction_achieved": -0.47058823529411775,
-      "timestamp": 1793014214.4283192
+      "truncated_size": 17,
+      "reduction_achieved": 0.0,
+      "timestamp": 1793803747.3032136
     }
   ],
   "metadata": {},
-  "created_at": 1793014214.4281824,
-  "updated_at": 1793014214.4283245
+  "created_at": 1793803747.3031235,
+  "updated_at": 1793803747.3032172
 }

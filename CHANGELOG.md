@@ -1,9 +1,17 @@
 # Changelog
 
+## 1.2.0 — work-in-progress checkpoint
+
+Partial code published for continued development. Known issues: STATUS.md.
+
 ## 1.1.0 — work-in-progress checkpoint
 
 Partial code published for continued development. Known issues: STATUS.md.
 
+### Fixed (this checkpoint)
+- Sandbox truncation logic: clamped reduction ratio to [0, 1] to prevent negative values on small outputs
+- All 21 tests pass
+- Session persistence verified working
 ## 1.0.0 — work-in-progress checkpoint
 
 Partial code published for continued development. Known issues: STATUS.md.

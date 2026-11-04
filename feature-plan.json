@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "current_feature": "core-api",
+  "current_feature": "context-sandbox",
   "features": [
     {
       "id": "core-api",
@@ -20,13 +20,16 @@
     {
       "id": "context-sandbox",
       "title": "Context Sandbox Tool Output Reduction",
-      "status": "planned",
+      "status": "in_progress",
       "acceptance": [
         "Tool output sandboxed and truncated to 98% reduction",
         "Session memory persisted across requests"
       ],
-      "implementation": [],
-      "tests": []
+      "implementation": [
+        "app/sandbox.py",
+        "app/main.py"
+      ],
+      "tests": ["tests/test_sandbox.py"]
     },
     {
       "id": "mcp-routing",

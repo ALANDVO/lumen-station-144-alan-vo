@@ -4,14 +4,14 @@
     {
       "tool_name": "bash",
       "raw_output": "test output",
-      "truncated_output": "\n... [truncated 11 chars]",
+      "truncated_output": "test output",
       "original_size": 11,
-      "truncated_size": 25,
-      "reduction_achieved": -1.272727272727273,
-      "timestamp": 1793014214.4611876
+      "truncated_size": 11,
+      "reduction_achieved": 0.0,
+      "timestamp": 1793803747.4138405
     }
   ],
   "metadata": {},
-  "created_at": 1793014214.4610362,
-  "updated_at": 1793014214.4611914
+  "created_at": 1793803747.4136739,
+  "updated_at": 1793803747.413845
 }

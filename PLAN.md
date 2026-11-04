@@ -4,7 +4,7 @@ Each round completes one feature or repair. Future items are planned, not implem
 
 ## Current round
 
-core-api
+context-sandbox
 
 ## Roadmap
 
@@ -23,11 +23,15 @@ Tests: `tests/test_main.py`
 
 ### context-sandbox — Context Sandbox Tool Output Reduction
 
-Status: planned
+Status: in_progress
 
 Acceptance:
 - Tool output sandboxed and truncated to 98% reduction
 - Session memory persisted across requests
+
+Implementation: `app/sandbox.py`, `app/main.py`
+
+Tests: `tests/test_sandbox.py`
 
 ### mcp-routing — MCP Platform Routing
 
