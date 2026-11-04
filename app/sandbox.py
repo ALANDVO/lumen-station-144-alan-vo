@@ -60,21 +60,29 @@ class ContextSandbox:
         # Don't truncate very small outputs
         if original_size < 100:
             truncated = output
-        else:
-            target_size = int(original_size * (1 - self.config.reduction_ratio))
-            target_size = min(target_size, self.config.max_output_chars)
+            truncated_size = original_size
+            reduction = 0.0
+            return truncated, original_size, truncated_size, reduction
 
-            if original_size <= target_size:
-                truncated = output
-            else:
-                # Reserve space for truncation message
-                msg = f"\n... [truncated {original_size - target_size} chars]"
-                msg_len = len(msg)
-                content_size = max(0, target_size - msg_len)
-                truncated = output[:content_size] + msg
+        target_size = int(original_size * (1 - self.config.reduction_ratio))
+        target_size = min(target_size, self.config.max_output_chars)
+
+        if original_size <= target_size:
+            truncated = output
+            truncated_size = original_size
+            reduction = 0.0
+            return truncated, original_size, truncated_size, reduction
+
+        # Reserve space for truncation message
+        msg = f"\n... [truncated {original_size - target_size} chars]"
+        msg_len = len(msg)
+        content_size = max(0, target_size - msg_len)
+        truncated = output[:content_size] + msg
 
         truncated_size = len(truncated)
         reduction = 1.0 - (truncated_size / original_size) if original_size > 0 else 0.0
+        # Clamp reduction to [0, 1]
+        reduction = max(0.0, min(1.0, reduction))
 
         return truncated, original_size, truncated_size, reduction
 
