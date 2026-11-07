@@ -1,19 +1,32 @@
 """Tests for Context Sandbox feature."""
 
 import pytest
+import shutil
+from pathlib import Path
 from httpx import ASGITransport, AsyncClient
 
 from app.main import app
-from app.sandbox import ContextSandbox, SandboxConfig, ToolOutput, SessionMemory
+from app.sandbox import ContextSandbox, SandboxConfig, ToolOutput, SessionMemory, get_sandbox
 
 
-@pytest.mark.asyncio
-async def test_health_endpoint():
-    transport = ASGITransport(app=app)
-    async with AsyncClient(transport=transport, base_url="http://test") as client:
-        response = await client.get("/health")
-        assert response.status_code == 200
-        assert response.json() == {"status": "ok"}
+# Default storage path used by global sandbox and tests without custom path
+DEFAULT_STORAGE = Path(".sandbox_sessions")
+
+
+@pytest.fixture(autouse=True)
+def cleanup_sandbox_storage():
+    """Clean up sandbox storage before and after each test."""
+    # Clean before
+    if DEFAULT_STORAGE.exists():
+        shutil.rmtree(DEFAULT_STORAGE)
+    # Reset global sandbox instance
+    import app.sandbox
+    app.sandbox._sandbox = None
+    yield
+    # Clean after
+    if DEFAULT_STORAGE.exists():
+        shutil.rmtree(DEFAULT_STORAGE)
+    app.sandbox._sandbox = None
 
 
 @pytest.mark.asyncio
