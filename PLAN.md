@@ -41,3 +41,6 @@ Acceptance:
 - Routes requests across 17 platforms via MCP
 - Hooks enforce routing rules
 
+---
+
+Alan Vo · [alanvo.net](https://alanvo.net)

@@ -17,3 +17,7 @@ Partial code published for continued development. Known issues: STATUS.md.
 Partial code published for continued development. Known issues: STATUS.md.
 
 ## 1.1.0 — work-in-progress checkpoint
+
+---
+
+Alan Vo · [alanvo.net](https://alanvo.net)

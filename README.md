@@ -51,3 +51,7 @@ lumen-station-144-alan-vo/
 See [PLAN.md](PLAN.md) for current implementation status and roadmap.
 
 Maintainer: Alan Vo <alanvo@gmail.com>
+
+---
+
+Alan Vo · [alanvo.net](https://alanvo.net)
