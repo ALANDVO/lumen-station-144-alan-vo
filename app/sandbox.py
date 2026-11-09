@@ -54,7 +54,7 @@ class ContextSandbox:
         self._sessions: dict[str, SessionMemory] = {}
 
     def _truncate_output(self, output: str) -> tuple[str, int, int, float]:
-        """Truncate output to achieve target reduction ratio."""
+        """Truncate output to achieve target reduction ratio using head/tail preservation."""
         original_size = len(output)
 
         # Don't truncate very small outputs
@@ -74,10 +74,15 @@ class ContextSandbox:
             return truncated, original_size, truncated_size, reduction
 
         # Reserve space for truncation message
-        msg = f"\n... [truncated {original_size - target_size} chars]"
+        msg = f"\n... [truncated {original_size - target_size} chars] ...\n"
         msg_len = len(msg)
         content_size = max(0, target_size - msg_len)
-        truncated = output[:content_size] + msg
+
+        # Split content between head and tail (60% head, 40% tail)
+        head_size = int(content_size * 0.6)
+        tail_size = content_size - head_size
+
+        truncated = output[:head_size] + msg + output[-tail_size:] if tail_size > 0 else output[:head_size] + msg
 
         truncated_size = len(truncated)
         reduction = 1.0 - (truncated_size / original_size) if original_size > 0 else 0.0
