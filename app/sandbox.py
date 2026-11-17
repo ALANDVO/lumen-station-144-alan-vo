@@ -76,6 +76,11 @@ class ContextSandbox:
         # Reserve space for truncation message
         msg = f"\n... [truncated {original_size - target_size} chars] ...\n"
         msg_len = len(msg)
+        if target_size < msg_len:
+            truncated = output
+            truncated_size = original_size
+            reduction = 0.0
+            return truncated, original_size, truncated_size, reduction
         content_size = max(0, target_size - msg_len)
 
         # Split content between head and tail (60% head, 40% tail)
