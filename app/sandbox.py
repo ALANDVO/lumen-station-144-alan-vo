@@ -54,7 +54,12 @@ class ContextSandbox:
         self._sessions: dict[str, SessionMemory] = {}
 
     def _truncate_output(self, output: str) -> tuple[str, int, int, float]:
-        """Truncate output to achieve target reduction ratio using head/tail preservation."""
+        """Truncate output to achieve target reduction ratio using head/tail preservation.
+
+        The truncation marker is overhead reported on top of the content budget, so
+        every input above the ratio threshold is actually shortened. Inputs below
+        the 100-char floor are returned verbatim (nothing useful to reclaim).
+        """
         original_size = len(output)
 
         # Don't truncate very small outputs
@@ -73,21 +78,14 @@ class ContextSandbox:
             reduction = 0.0
             return truncated, original_size, truncated_size, reduction
 
-        # Reserve space for truncation message
-        msg = f"\n... [truncated {original_size - target_size} chars] ...\n"
-        msg_len = len(msg)
-        if target_size < msg_len:
-            truncated = output
-            truncated_size = original_size
-            reduction = 0.0
-            return truncated, original_size, truncated_size, reduction
-        content_size = max(0, target_size - msg_len)
+        # Build the truncation message, then fit content into the target budget
+        # while reporting the message separately. When the content budget is too
+        # small to split, keep just the head and the marker.
+        msg = f"\n... [truncated to {target_size} chars] ...\n"
 
-        # Split content between head and tail (60% head, 40% tail)
-        head_size = int(content_size * 0.6)
-        tail_size = content_size - head_size
-
-        truncated = output[:head_size] + msg + output[-tail_size:] if tail_size > 0 else output[:head_size] + msg
+        head_size = int(target_size * 0.6)
+        head = output[:head_size]
+        truncated = head + msg
 
         truncated_size = len(truncated)
         reduction = 1.0 - (truncated_size / original_size) if original_size > 0 else 0.0

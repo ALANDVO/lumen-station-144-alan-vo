@@ -15,12 +15,14 @@
         "app/main.py",
         "pyproject.toml"
       ],
-      "tests": ["tests/test_main.py"]
+      "tests": [
+        "tests/test_main.py"
+      ]
     },
     {
       "id": "context-sandbox",
       "title": "Context Sandbox Tool Output Reduction",
-      "status": "in_progress",
+      "status": "done",
       "acceptance": [
         "Tool output sandboxed and truncated to 98% reduction",
         "Session memory persisted across requests"
@@ -29,7 +31,9 @@
         "app/sandbox.py",
         "app/main.py"
       ],
-      "tests": ["tests/test_sandbox.py"]
+      "tests": [
+        "tests/test_sandbox.py"
+      ]
     },
     {
       "id": "mcp-routing",
