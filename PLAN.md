@@ -23,7 +23,7 @@ Tests: `tests/test_main.py`
 
 ### context-sandbox — Context Sandbox Tool Output Reduction
 
-Status: in_progress
+Status: done
 
 Acceptance:
 - Tool output sandboxed and truncated to 98% reduction
