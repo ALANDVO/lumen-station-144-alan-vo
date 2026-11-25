@@ -4,7 +4,7 @@ Each round completes one feature or repair. Future items are planned, not implem
 
 ## Current round
 
-context-sandbox
+mcp-routing
 
 ## Roadmap
 
@@ -35,11 +35,15 @@ Tests: `tests/test_sandbox.py`
 
 ### mcp-routing — MCP Platform Routing
 
-Status: planned
+Status: in_progress
 
 Acceptance:
 - Routes requests across 17 platforms via MCP
 - Hooks enforce routing rules
+
+Implementation: `app/router.py`, `app/main.py`
+
+Tests: `tests/test_router.py`
 
 ---
 
