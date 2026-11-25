@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "current_feature": "context-sandbox",
+  "current_feature": "mcp-routing",
   "features": [
     {
       "id": "core-api",
@@ -38,13 +38,18 @@
     {
       "id": "mcp-routing",
       "title": "MCP Platform Routing",
-      "status": "planned",
+      "status": "in_progress",
       "acceptance": [
         "Routes requests across 17 platforms via MCP",
         "Hooks enforce routing rules"
       ],
-      "implementation": [],
-      "tests": []
+      "implementation": [
+        "app/router.py",
+        "app/main.py"
+      ],
+      "tests": [
+        "tests/test_router.py"
+      ]
     }
   ]
 }
